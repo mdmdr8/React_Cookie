@@ -10,15 +10,21 @@ export default function SetCookie() {
     expires.setMinutes(expires.getMinutes() + 2);
 
     const registCookie = () => {
-        SetCookie('data', data, {
+        SetCookies('data', data, {
             url: '/',
             expires
         });
     }
+
+    const loadCookie = () => {
+        console.log(cookies);
+    }
+
     return (
         <>
             <input type="text" value={data} onChange={(e) => setData(e.target.value)} />
             <button onClick={registCookie}>add cookie</button>
+            <button onClick={loadCookie}>load cookie</button>
 
         </>
     )

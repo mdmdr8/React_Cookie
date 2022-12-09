@@ -8,7 +8,7 @@ function App() {
     <div className="App" >
       <Routes>
         <Route exact path="/" element={<SetCookie />} />
-        <Route exact path="/" element={<GetCookie />} />
+        <Route exact path="/cookie" element={<GetCookie />} />
       </Routes>
     </div>
   );
